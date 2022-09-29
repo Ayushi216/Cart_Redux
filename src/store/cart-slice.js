@@ -13,11 +13,11 @@ const cartSlice = createSlice({
       state.totalQuantity++;
       if (!existingItem) {
         state.items.push({
-          itemId: newItem.id,
+          id: newItem.id,
           price: newItem.price,
           quantity: 1,
           totalPrice: newItem.price,
-          name: newItem.name,
+          name: newItem.title,
         });
       } else {
         existingItem.quantity++;
@@ -37,6 +37,12 @@ const cartSlice = createSlice({
     },
   },
 });
+
+const sendCartData = (cartData) => {
+  return (dispatch) => {
+    dispatch
+  }
+}
 
 export const cartActions = cartSlice.actions;
 export default cartSlice;
